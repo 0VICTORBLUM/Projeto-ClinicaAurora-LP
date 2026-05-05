@@ -50,3 +50,59 @@ img {
 .text-center {
     text-align: center;
 }
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-link {
+    color: var(--primary-blue);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+[data-aos].appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-whatsapp {
+    background-color: var(--primary-green);
+    color: var(--pure-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--second-green);
+}
