@@ -1,0 +1,21 @@
+.social-proof {
+    padding: 2rem 0;
+    background: var(--pure-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.proof-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
+.stat-item p {
+    color: var(--light-text);
+    font-weight: 500;
+}
