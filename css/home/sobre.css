@@ -1,0 +1,30 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.differentials {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.diff-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.diff-item span {
+    color: var(--primary-blue);
+    background: var(--secondary-blue);
+    padding: 10px;
+    border-radius: 12px;
+}
