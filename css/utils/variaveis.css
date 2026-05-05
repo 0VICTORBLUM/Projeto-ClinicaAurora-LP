@@ -1,0 +1,32 @@
+:root {
+    /* Cores */
+    --primary-blue: #0056b3;
+    --secondary-blue: #e7f1ff;
+    --primary-green: #28a745;
+    --accent-green: #d4edda;
+    --pure-white: #ffffff;
+    --off-white: #f8f9fa;
+    --dark-text: #212529;
+    --light-text: #6c757d;
+    --border-color: #dee2e6;
+    
+    /* Tipografia */
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    
+    /* Espaçamento */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
