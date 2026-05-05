@@ -1,0 +1,19 @@
+.map-section {
+    height: 400px;
+    background: #eee;
+    margin-top: 4rem;
+}
+
+.map-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+}
+
+.map-placeholder span {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}

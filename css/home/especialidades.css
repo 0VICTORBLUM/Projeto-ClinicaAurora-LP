@@ -1,0 +1,32 @@
+.bg-light {
+    background-color: var(--off-white);
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--pure-white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-blue);
+}
+
+.card span {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    display: block;
+}
