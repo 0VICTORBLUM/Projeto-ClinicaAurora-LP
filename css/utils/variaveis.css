@@ -1,6 +1,7 @@
 :root {
     /* Cores */
     --primary-blue: #0056b3;
+    --accent-blue: #002b5c;
     --secondary-blue: #e7f1ff;
     --primary-green: #28a745;
     --second-green: #128c7e;
@@ -28,6 +29,6 @@
     --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
     
     /* Transições */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
 }

@@ -1,7 +1,5 @@
-@import url(/css/utils/responsivo.css);
 @import url(/css/utils/variaveis.css);
 @import url(/css/utils/globais.css);
-@import url(/css/home/footer.css);
 @import url(/css/home/header.css);
 @import url(/css/home/hero.css);
 @import url(/css/home/provas.css);
@@ -10,6 +8,7 @@
 @import url(/css/home/processo.css);
 @import url(/css/home/equipe.css);
 @import url(/css/home/contato.css);
+@import url(/css/home/footer.css);
 @import url(/css/home/mapa.css);
 @import url(/css/home/whatsbtn.css);
 @import url(/css/utils/responsivo.css);

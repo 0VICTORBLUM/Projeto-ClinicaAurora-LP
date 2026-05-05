@@ -1,34 +1,145 @@
-@media (max-width: 798px) {
-    .hero-grid, .about-grid, .contact-grid {
+@media (max-width: 768px) {
+
+    /* --- Layout grids --- */
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    /* --- Hero --- */
     .hero-content {
         text-align: center;
     }
-    
-    .hero-content p {
-        margin: 0 auto 2rem;
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+        line-height: 1.25;
     }
-    
+
+    .hero-content p {
+        margin: 0 auto 1.5rem;
+        font-size: 0.95rem;
+    }
+
     .hero-actions {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
     }
-    
-    .nav-links, .nav-cta {
+
+    .hero-image img {
+        margin-top: 2rem;
+        border-radius: 12px;
+    }
+
+    /* --- Section headers --- */
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* --- Navigation: hide desktop, show hamburger --- */
+    .nav-links,
+    .nav-cta {
         display: none;
     }
-    
+
     .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
+
+    /* --- Steps --- */
     .steps-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    /* --- Social proof stats --- */
+    .proof-stats {
+        flex-direction: column;
+        gap: 1.4rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    /* --- Cards/Specialties --- */
+    .specialties-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    /* --- Team --- */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .btn.w-full {
+        width: 100%;
+    }
+
+    /* --- Contact form --- */
+    .contact-form-container {
+        margin-top: 2rem;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+
+    /* --- Container padding --- */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* --- Section padding --- */
+    .section-padding {
+        padding: 2.5rem 0;
+    }
+
+    /* --- Map --- */
+    .map-section {
+        height: 280px;
+        margin-top: 2rem;
+    }
+
+    /* --- About differentials --- */
+    .differentials {
+        margin-top: 1.5rem;
+    }
+
+    .diff-item {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .proof-stats {
+        gap: 1.2rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.8rem;
     }
 }

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,10 +31,22 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <a href="#agendar" class="btn btn-primary nav-cta">Agendar Consulta</a>
-            <button class="mobile-menu-btn">
-                <span class="material-icons-round">menu</span>
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
+                <span class="material-icons-round menu-icon-open">menu</span>
+                <span class="material-icons-round menu-icon-close">close</span>
             </button>
         </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <ul class="mobile-nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="#agendar" class="btn btn-primary mobile-cta">Agendar Consulta</a>
+        </div>
     </header>
     <main>
         <section class="hero">
@@ -56,15 +69,15 @@
             <div class="container">
                 <div class="proof-stats">
                     <div class="stat-item">
-                        <h3>+2k</h3>
+                        <h3 data-counter data-target="2000" data-prefix="+" data-suffix="k" data-divider="1000">+2k</h3>
                         <p>Pacientes atendidos</p>
                     </div>
                     <div class="stat-item">
-                        <h3>15+</h3>
+                        <h3 data-counter data-target="15" data-suffix="+">15+</h3>
                         <p>Especialistas</p>
                     </div>
                     <div class="stat-item">
-                        <h3>4.9/5</h3>
+                        <h3 data-counter data-target="49" data-divider="10" data-suffix="/5">4.9/5</h3>
                         <p>Avaliação no Google</p>
                     </div>
                 </div>
@@ -242,12 +255,18 @@
             </div>
         </section>
 
-        <!-- Google Maps Placeholder -->
+        <!-- Google Maps - Av. Paulista, São Paulo -->
         <section class="map-section">
-            <div class="map-placeholder">
-                <span class="material-icons-round">map</span>
-                <p>Integração com Google Maps aqui</p>
-            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.075!2d-46.6527!3d-23.5630!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                width="100%"
+                height="400"
+                style="border:0; display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Clínica Aurora - Av. Paulista, São Paulo">
+            </iframe>
         </section>
     </main>
 
@@ -272,10 +291,15 @@
             <div class="footer-social">
                 <h4>Siga-nos</h4>
                 <div class="social-icons">
-                    <!-- Icons would go here -->
-                    <span>Instagram</span>
-                    <span>Facebook</span>
-                    <span>LinkedIn</span>
+                    <a href="#" class="social-icon-link" aria-label="Instagram" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" class="social-icon-link" aria-label="Facebook" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon-link" aria-label="LinkedIn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
