@@ -106,3 +106,22 @@ img {
 .btn-whatsapp:hover {
     background-color: var(--second-green);
 }
+
+/* FONT RENDER */
+@font-face {
+  font-family: 'SuaFonte';
+  src: url('/fonts/suafonte.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* EVITAR CLS EM IMAGENS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}

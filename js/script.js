@@ -147,3 +147,23 @@
     }
 
 })();
+
+const menuBtn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+
+// cria overlay dinamicamente
+const overlay = document.createElement('div');
+overlay.classList.add('menu-overlay');
+document.body.appendChild(overlay);
+
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  overlay.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
+});
+
+overlay.addEventListener('click', () => {
+  nav.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+});
