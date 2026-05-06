@@ -15,40 +15,44 @@
     }, { passive: true });
 
     // ─── Mobile menu ─────────────────────────────────────────────────────────
-    const mobileBtn   = document.querySelector('.mobile-menu-btn');
-    const mobileMenu  = document.getElementById('mobileMenu');
+    // ─── Mobile menu ─────────────────────────────────────────
+    const mobileBtn  = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
     function openMenu() {
-        mobileBtn.classList.add('is-open');
-        mobileMenu.classList.add('is-open');
-        mobileBtn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
+    mobileBtn.classList.add('is-open');
+    mobileMenu.classList.add('is-open');
+    mobileBtn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
     }
 
     function closeMenu() {
-        mobileBtn.classList.remove('is-open');
-        mobileMenu.classList.remove('is-open');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+    mobileBtn.classList.remove('is-open');
+    mobileMenu.classList.remove('is-open');
+    mobileBtn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
     }
 
-    mobileBtn.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.contains('is-open');
-        isOpen ? closeMenu() : openMenu();
+    mobileBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita conflito com document click
+    const isOpen = mobileMenu.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
     });
 
-    // Close when clicking a link inside mobile menu
+/* Fecha ao clicar nos links */
     mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
+    link.addEventListener('click', closeMenu);
     });
 
-    // Close on outside click
+/* Fecha ao clicar fora */
     document.addEventListener('click', (e) => {
-        if (mobileMenu.classList.contains('is-open') &&
-            !mobileMenu.contains(e.target) &&
-            !mobileBtn.contains(e.target)) {
-            closeMenu();
-        }
+    if (
+        mobileMenu.classList.contains('is-open') &&
+        !mobileMenu.contains(e.target) &&
+        !mobileBtn.contains(e.target)
+    ) {
+        closeMenu();
+    }
     });
 
     // ─── Smooth scroll ────────────────────────────────────────────────────────
@@ -147,23 +151,3 @@
     }
 
 })();
-
-const menuBtn = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-
-// cria overlay dinamicamente
-const overlay = document.createElement('div');
-overlay.classList.add('menu-overlay');
-document.body.appendChild(overlay);
-
-menuBtn.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  overlay.classList.toggle('active');
-  document.body.classList.toggle('menu-open');
-});
-
-overlay.addEventListener('click', () => {
-  nav.classList.remove('active');
-  overlay.classList.remove('active');
-  document.body.classList.remove('menu-open');
-});
